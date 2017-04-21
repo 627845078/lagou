@@ -5,7 +5,7 @@ angular.module('app').controller('companyCtrl', ['$scope','$http','$state',funct
     var companyId = $state.params.id;
     $scope.posList = [];
     
-    $http.get('/data/positionList.json').then(function(data){
+    $http.get('data/positionList.json').then(function(data){
         angular.forEach(data.data,function(item,index){
             if(item.companyId == companyId){
                 $scope.company = item;

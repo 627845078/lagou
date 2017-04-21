@@ -28,7 +28,7 @@ angular.module('app').controller('jobsCtrl', ['$scope', '$http', '$state', '$q',
 
     function getPositionList() {
         var def = $q.defer();  // $q处理异步
-        $http.get('/data/positionList.json').then(function (data) {
+        $http.get('data/positionList.json').then(function (data) {
             def.resolve(data);
         });
         return def.promise;

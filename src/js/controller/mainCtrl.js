@@ -6,7 +6,7 @@ angular.module('app').controller('mainCtrl', ['$scope','$http','cache',function(
     } else {
         $scope.isLogin = false;
     }
-    $http.get('/data/positionList.json').then(function(data){
+    $http.get('data/positionList.json').then(function(data){
         $scope.list = data.data;
     }).catch(function(data){
         console.log('网络错误..');
